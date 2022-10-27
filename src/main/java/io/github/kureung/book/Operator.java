@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.function.BinaryOperator;
 
 public enum Operator {
-    ADDITION((a, b) -> a + b);
+    ADDITION((a, b) -> a + b),
+    MULTIPLICATION((a, b) -> a * b),
+    ;
 
     private final BinaryOperator<Integer> formula;
 
