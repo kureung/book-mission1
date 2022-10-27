@@ -1,4 +1,4 @@
-package io.github.kureung.book;
+package io.github.kureung.book.numbersComparator.numberComparator;
 
 import java.util.List;
 import java.util.function.BinaryOperator;
