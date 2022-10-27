@@ -1,0 +1,17 @@
+package io.github.kureung.book;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+class NumbersComparatorFactoryTest {
+
+    @Test
+    void 숫자들_비교자를_생성할_수_있다() {
+        NumbersComparatorFactory numbersComparatorFactory = new NumbersComparatorFactory(List.of(97, 98));
+
+        assertThat(numbersComparatorFactory.numbersComparator()).isEqualTo(new NumbersComparator(97, 98));
+    }
+}
