@@ -1,15 +1,17 @@
 package io.github.kureung.book;
 
+import java.util.Objects;
+
 public class NumbersComparator {
 
     private final NumberComparator numberComparator;
     private final NumberComparator otherNumberComparator;
 
-    public NumbersComparator(int number, int otherNumber) {
+    NumbersComparator(int number, int otherNumber) {
         this(new NumberComparator(number), new NumberComparator(otherNumber));
     }
 
-    public NumbersComparator(NumberComparator numberComparator, NumberComparator otherNumberComparator) {
+    NumbersComparator(NumberComparator numberComparator, NumberComparator otherNumberComparator) {
         this.numberComparator = numberComparator;
         this.otherNumberComparator = otherNumberComparator;
     }
@@ -18,4 +20,16 @@ public class NumbersComparator {
         return Math.max(numberComparator.greaterResult(), otherNumberComparator.greaterResult());
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NumbersComparator that = (NumbersComparator) o;
+        return Objects.equals(numberComparator, that.numberComparator) && Objects.equals(otherNumberComparator, that.otherNumberComparator);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numberComparator, otherNumberComparator);
+    }
 }
