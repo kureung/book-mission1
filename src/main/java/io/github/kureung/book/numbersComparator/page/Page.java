@@ -1,10 +1,10 @@
-package io.github.kureung.book.numbersComparator.numberComparator;
+package io.github.kureung.book.numbersComparator.page;
 
 import java.util.List;
 import java.util.Objects;
 
-import static io.github.kureung.book.numbersComparator.numberComparator.Operator.ADDITION;
-import static io.github.kureung.book.numbersComparator.numberComparator.Operator.MULTIPLICATION;
+import static io.github.kureung.book.numbersComparator.page.Operator.ADDITION;
+import static io.github.kureung.book.numbersComparator.page.Operator.MULTIPLICATION;
 
 public class Page {
 

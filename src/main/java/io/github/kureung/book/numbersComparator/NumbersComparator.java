@@ -1,6 +1,6 @@
 package io.github.kureung.book.numbersComparator;
 
-import io.github.kureung.book.numbersComparator.numberComparator.Page;
+import io.github.kureung.book.numbersComparator.page.Page;
 
 import java.util.Objects;
 
