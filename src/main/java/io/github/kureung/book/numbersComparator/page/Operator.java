@@ -3,7 +3,7 @@ package io.github.kureung.book.numbersComparator.page;
 import java.util.List;
 import java.util.function.BinaryOperator;
 
-public enum Operator {
+enum Operator {
     ADDITION((a, b) -> a + b),
     MULTIPLICATION((a, b) -> a * b),
     ;
