@@ -6,15 +6,15 @@ import java.util.Objects;
 import static io.github.kureung.book.numbersComparator.numberComparator.Operator.ADDITION;
 import static io.github.kureung.book.numbersComparator.numberComparator.Operator.MULTIPLICATION;
 
-public class NumberComparator {
+public class Page {
 
     private final NumberParser numberParser;
 
-    public NumberComparator(int number) {
+    public Page(int number) {
         this(new NumberParser(number));
     }
 
-    public NumberComparator(NumberParser numberParser) {
+    public Page(NumberParser numberParser) {
         this.numberParser = numberParser;
     }
 
@@ -27,7 +27,7 @@ public class NumberComparator {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        NumberComparator that = (NumberComparator) o;
+        Page that = (Page) o;
         return Objects.equals(numberParser, that.numberParser);
     }
 

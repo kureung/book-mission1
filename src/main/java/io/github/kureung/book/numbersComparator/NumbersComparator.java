@@ -1,25 +1,25 @@
 package io.github.kureung.book.numbersComparator;
 
-import io.github.kureung.book.numbersComparator.numberComparator.NumberComparator;
+import io.github.kureung.book.numbersComparator.numberComparator.Page;
 
 import java.util.Objects;
 
 public class NumbersComparator {
 
-    private final NumberComparator numberComparator;
-    private final NumberComparator otherNumberComparator;
+    private final Page page;
+    private final Page otherPage;
 
     NumbersComparator(int number, int otherNumber) {
-        this(new NumberComparator(number), new NumberComparator(otherNumber));
+        this(new Page(number), new Page(otherNumber));
     }
 
-    NumbersComparator(NumberComparator numberComparator, NumberComparator otherNumberComparator) {
-        this.numberComparator = numberComparator;
-        this.otherNumberComparator = otherNumberComparator;
+    NumbersComparator(Page page, Page otherPage) {
+        this.page = page;
+        this.otherPage = otherPage;
     }
 
     public int greaterResult() {
-        return Math.max(numberComparator.greaterResult(), otherNumberComparator.greaterResult());
+        return Math.max(page.greaterResult(), otherPage.greaterResult());
     }
 
     @Override
@@ -27,11 +27,11 @@ public class NumbersComparator {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NumbersComparator that = (NumbersComparator) o;
-        return Objects.equals(numberComparator, that.numberComparator) && Objects.equals(otherNumberComparator, that.otherNumberComparator);
+        return Objects.equals(page, that.page) && Objects.equals(otherPage, that.otherPage);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberComparator, otherNumberComparator);
+        return Objects.hash(page, otherPage);
     }
 }
