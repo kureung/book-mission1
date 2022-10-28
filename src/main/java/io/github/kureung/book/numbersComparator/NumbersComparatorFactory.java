@@ -10,12 +10,12 @@ public class NumbersComparatorFactory {
         this.numbers = numbers;
     }
 
-    public NumbersComparator numbersComparator() {
+    public Pages numbersComparator() {
         if (numbers.size() != 2) {
             throw new IllegalStateException();
         }
 
-        return new NumbersComparator(numbers.get(0), numbers.get(1));
+        return new Pages(numbers.get(0), numbers.get(1));
     }
 
 }
