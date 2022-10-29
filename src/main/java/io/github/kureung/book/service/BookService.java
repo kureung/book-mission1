@@ -5,22 +5,22 @@ import io.github.kureung.book.pages.PagesFactory;
 
 import java.util.List;
 
-public class ComparatorService {
+public class BookService {
 
     private final Pages pages;
 
     private final Pages otherPages;
 
-    private ComparatorService(Pages pages, Pages otherPages) {
+    private BookService(Pages pages, Pages otherPages) {
         this.pages = pages;
         this.otherPages = otherPages;
     }
 
-    public static ComparatorService of(List<Integer> numbers, List<Integer> otherNumbers) {
+    public static BookService of(List<Integer> numbers, List<Integer> otherNumbers) {
         Pages pages = new PagesFactory(numbers).numbersComparator();
         Pages otherPages = new PagesFactory(otherNumbers).numbersComparator();
 
-        return new ComparatorService(pages, otherPages);
+        return new BookService(pages, otherPages);
     }
 
 
