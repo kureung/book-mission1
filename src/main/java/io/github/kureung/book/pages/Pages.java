@@ -18,6 +18,26 @@ public class Pages {
         this.pages = pages;
     }
 
+    public MatchResult matchResult(Pages pages) {
+        if (isWine(greaterResult(), pages.greaterResult())) {
+            return MatchResult.WIN;
+        }
+
+        if (isLose(greaterResult(), pages.greaterResult())) {
+            return MatchResult.LOSE;
+        }
+
+        return MatchResult.DRAW;
+    }
+
+    private boolean isWine(int left, int right) {
+        return left > right;
+    }
+
+    private boolean isLose(int left, int right) {
+        return left < right;
+    }
+
     public int greaterResult() {
         Page page = pages.stream()
                 .max(Comparator.comparingInt(Page::greaterResult))
@@ -38,4 +58,5 @@ public class Pages {
     public int hashCode() {
         return Objects.hash(pages);
     }
+
 }
