@@ -1,4 +1,4 @@
-package io.github.kureung.book.numbersComparator;
+package io.github.kureung.book.pages;
 
 import java.util.List;
 

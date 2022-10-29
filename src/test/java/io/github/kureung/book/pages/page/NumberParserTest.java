@@ -1,4 +1,4 @@
-package io.github.kureung.book.numbersComparator.page;
+package io.github.kureung.book.pages.page;
 
 import org.junit.jupiter.api.Test;
 

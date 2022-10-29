@@ -1,7 +1,7 @@
 package io.github.kureung.book.service;
 
-import io.github.kureung.book.numbersComparator.Pages;
-import io.github.kureung.book.numbersComparator.PagesFactory;
+import io.github.kureung.book.pages.Pages;
+import io.github.kureung.book.pages.PagesFactory;
 
 import java.util.List;
 
