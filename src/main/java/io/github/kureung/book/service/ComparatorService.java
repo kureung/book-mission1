@@ -1,7 +1,7 @@
 package io.github.kureung.book.service;
 
-import io.github.kureung.book.numbersComparator.NumbersComparatorFactory;
 import io.github.kureung.book.numbersComparator.Pages;
+import io.github.kureung.book.numbersComparator.PagesFactory;
 
 import java.util.List;
 
@@ -17,8 +17,8 @@ public class ComparatorService {
     }
 
     public static ComparatorService of(List<Integer> numbers, List<Integer> otherNumbers) {
-        Pages pages = new NumbersComparatorFactory(numbers).numbersComparator();
-        Pages otherPages = new NumbersComparatorFactory(otherNumbers).numbersComparator();
+        Pages pages = new PagesFactory(numbers).numbersComparator();
+        Pages otherPages = new PagesFactory(otherNumbers).numbersComparator();
 
         return new ComparatorService(pages, otherPages);
     }

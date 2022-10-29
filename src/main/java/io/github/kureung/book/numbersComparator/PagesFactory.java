@@ -2,11 +2,11 @@ package io.github.kureung.book.numbersComparator;
 
 import java.util.List;
 
-public class NumbersComparatorFactory {
+public class PagesFactory {
 
     private final List<Integer> numbers;
 
-    public NumbersComparatorFactory(List<Integer> numbers) {
+    public PagesFactory(List<Integer> numbers) {
         this.numbers = numbers;
     }
 
