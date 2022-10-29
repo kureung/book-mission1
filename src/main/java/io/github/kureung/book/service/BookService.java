@@ -17,8 +17,8 @@ public class BookService {
     }
 
     public static BookService of(List<Integer> numbers, List<Integer> otherNumbers) {
-        Pages pages = new PagesFactory(numbers).numbersComparator();
-        Pages otherPages = new PagesFactory(otherNumbers).numbersComparator();
+        Pages pages = new PagesFactory(numbers).pages();
+        Pages otherPages = new PagesFactory(otherNumbers).pages();
 
         return new BookService(pages, otherPages);
     }

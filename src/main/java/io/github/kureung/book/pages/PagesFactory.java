@@ -10,7 +10,7 @@ public class PagesFactory {
         this.numbers = numbers;
     }
 
-    public Pages numbersComparator() {
+    public Pages pages() {
         if (numbers.size() != 2) {
             throw new IllegalStateException();
         }

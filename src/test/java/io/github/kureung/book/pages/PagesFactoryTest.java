@@ -12,6 +12,6 @@ class PagesFactoryTest {
     void 숫자들_비교자를_생성할_수_있다() {
         PagesFactory pagesFactory = new PagesFactory(List.of(97, 98));
 
-        assertThat(pagesFactory.numbersComparator()).isEqualTo(new Pages(97, 98));
+        assertThat(pagesFactory.pages()).isEqualTo(new Pages(97, 98));
     }
 }
