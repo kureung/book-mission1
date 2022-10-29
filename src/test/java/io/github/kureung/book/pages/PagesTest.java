@@ -11,13 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class PagesTest {
 
-    @Test
-    void 두_수의_연산값_중_더_큰_값을_반환한다() {
-        Pages pages = new Pages(97, 98);
-        assertThat(pages.greaterResult()).isEqualTo(72);
-    }
-
-
     @MethodSource
     @ParameterizedTest
     void 승부를_결과를_반환할_수_있다(Pages pages, Pages otherPages, MatchResult matchResult) {
