@@ -38,7 +38,7 @@ public class Pages {
         return left < right;
     }
 
-    public int greaterResult() {
+    private int greaterResult() {
         Page page = pages.stream()
                 .max(Comparator.comparingInt(Page::greaterResult))
                 .orElseThrow();
