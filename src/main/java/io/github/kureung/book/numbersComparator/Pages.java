@@ -2,36 +2,40 @@ package io.github.kureung.book.numbersComparator;
 
 import io.github.kureung.book.numbersComparator.page.Page;
 
+import java.util.Comparator;
+import java.util.List;
 import java.util.Objects;
 
 public class Pages {
 
-    private final Page page;
-    private final Page otherPage;
+    private final List<Page> pages;
 
     Pages(int number, int otherNumber) {
-        this(new Page(number), new Page(otherNumber));
+        this(List.of(new Page(number), new Page(otherNumber)));
     }
 
-    Pages(Page page, Page otherPage) {
-        this.page = page;
-        this.otherPage = otherPage;
+    public Pages(List<Page> pages) {
+        this.pages = pages;
     }
 
     public int greaterResult() {
-        return Math.max(page.greaterResult(), otherPage.greaterResult());
+        Page page = pages.stream()
+                .max(Comparator.comparingInt(Page::greaterResult))
+                .orElseThrow();
+
+        return page.greaterResult();
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Pages that = (Pages) o;
-        return Objects.equals(page, that.page) && Objects.equals(otherPage, that.otherPage);
+        Pages pages1 = (Pages) o;
+        return Objects.equals(pages, pages1.pages);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(page, otherPage);
+        return Objects.hash(pages);
     }
 }
